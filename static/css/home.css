@@ -1,0 +1,25 @@
+#login_button {
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+}
+
+#welcome {
+    width: 100%;
+    text-align: center;
+    padding-top: 12%;
+}
+
+#year_dropdown {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(225, 225, 225);
+}

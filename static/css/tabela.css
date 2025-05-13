@@ -1,0 +1,17 @@
+#year_dropdown {
+    display: inline-block;
+}
+
+#table_type {
+    display: inline-block;
+}
+
+
+#year_dropdown .dropdown-item {
+    text-align: center;
+}
+
+#year_dropdown .dropdown-item:hover {
+    background-color: rgb(225, 225, 225);
+}
+

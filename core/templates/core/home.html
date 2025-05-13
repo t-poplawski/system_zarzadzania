@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_tags %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- przycisk do logowania -->
+<div id="login_button">
+    <a href="" class="button is-dark is-outlined"><span class="icon-text"><span class="icon mr-1"><i class="fa-regular fa-user"></span></i>Logowanie</span></a>
+</div>
+
+<!-- przywitanie -->
+<div id="welcome">
+    <h1 class="is-size-3">Witaj w systemie zarządzania obciążeniami</h1>
+</div>
+
+<!-- dropdown -->
+<div id="year_dropdown">
+    <div class="dropdown mr-2">
+        <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                <span>Wybierz rok akademicki</span>
+                <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </button>
+        </div>
+        <div class="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+                <a href="{% url 'tabela_view' '2024-2025' 'przedmioty' %}">
+                    <div class="dropdown-item">
+                        2024/2025
+                    </div>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="{% url 'tabela_view' '2023-2024' 'przedmioty' %}">
+                    <div class="dropdown-item">
+                        2023/2024
+                    </div>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="{% url 'tabela_view' '2022-2023' 'przedmioty' %}">
+                    <div class="dropdown-item">
+                        2022/2023
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
