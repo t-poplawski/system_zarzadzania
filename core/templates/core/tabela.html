@@ -26,19 +26,19 @@
             </div>
             <div class="dropdown-menu" role="menu">
                 <div class="dropdown-content">
-                    <a href="{% url 'tabela_view' '2024-2025' 'przedmioty' %}">
+                    <a href="{% url 'tabela_view' '2024-2025' tabela %}">
                         <div class="dropdown-item">
                             2024/2025
                         </div>
                     </a>
                     <hr class="dropdown-divider" />
-                    <a href="{% url 'tabela_view' '2023-2024' 'przedmioty' %}">
+                    <a href="{% url 'tabela_view' '2023-2024' tabela %}">
                         <div class="dropdown-item">
                             2023/2024
                         </div>
                     </a>
                     <hr class="dropdown-divider" />
-                    <a href="{% url 'tabela_view' '2022-2023' 'przedmioty' %}">
+                    <a href="{% url 'tabela_view' '2022-2023' tabela %}">
                         <div class="dropdown-item">
                             2022/2023
                         </div>
@@ -50,10 +50,14 @@
 
     <!-- wybór tabeli -->
     <div id="table_type" class="p-3">
-        <a href="{% url 'tabela_view' rok 'przedmioty' %}" class="button mr-3 ml-5">Przedmioty</a>
-        <a href="{% url 'tabela_view' rok 'grupy' %}" class="button mr-3">Grupy</a>
-        <a href="{% url 'tabela_view' rok 'pracownicy' %}" class="button">Pracownicy</a>
+        <a href="{% url 'tabela_view' rok 'przedmioty' %}"
+           class="button mr-3 ml-5{% if tabela == 'przedmioty' %} is-link is-light{% endif %}">Przedmioty</a>
+        <a href="{% url 'tabela_view' rok 'grupy' %}"
+           class="button mr-3{% if tabela == 'grupy' %} is-link is-light{% endif %}">Grupy</a>
+        <a href="{% url 'tabela_view' rok 'pracownicy' %}"
+           class="button{% if tabela == 'pracownicy' %} is-link is-light{% endif %}">Pracownicy</a>
     </div>
+    
 </div>
 
 

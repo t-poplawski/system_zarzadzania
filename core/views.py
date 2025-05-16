@@ -12,5 +12,6 @@ def home(request):
 def tabela_view(request, rok, tabela):
     return render(request, f'core/{tabela}.html', {
         'rok': rok,
-        'rok_slash': rok.replace('-', '/')
+        'rok_slash': rok.replace('-', '/'),
+        'tabela': tabela,
     })

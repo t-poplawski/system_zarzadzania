@@ -3,11 +3,84 @@
 
 {% block head_tags %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
+<script src="{% static 'js/sidebar.js' %}"></script>
 {% endblock %}
 
 {% block content %}
+<!-- sidebar -->
+<nav class="sidebar close">
+    <header>
+        <div class="image-text">
+            <span class="image">
+                <img src="{% static 'img/user_icon.png' %}" alt="user">
+            </span>
+
+            <div class="text header-text">
+                <span class="tools-text">User12</span>
+            </div>
+        </div>
+
+        <a href="#" class="toggle"><i class="fa-solid fa-caret-left"></i></a>
+    </header>
+
+    <div class="menu-bar">
+        <div class="custom-menu">
+            <ul class="menu-links">
+                <!-- tabele -->
+                <li class="nav-link">
+                    <a href="">
+                        <i class="fa-solid fa-table icon is-small"></i>
+                        <span class="text nav-text">Tabele</span>
+                    </a>
+                </li>
+
+                <!-- Import Excel -->
+                <li class="nav-link">
+                    <a href="">
+                        <i class="fa-solid fa-upload icon is-small"></i>
+                        <span class="text nav-text">Import Excel</span>
+                    </a>
+                </li>
+
+                <!-- Eksport Excel -->
+                <li class="nav-link">
+                    <a href="">
+                        <i class="fa-solid fa-download icon is-small"></i>
+                        <span class="text nav-text">Eksport Excel</span>
+                    </a>
+                </li>
+
+                <!-- Baza danych -->
+                <li class="nav-link">
+                    <a href="">
+                        <i class="fa-solid fa-database icon is-small"></i>
+                        <span class="text nav-text">Baza danych</span>
+                    </a>
+                </li>
+
+                <!-- Raporty -->
+                <li class="nav-link">
+                    <a href="">
+                        <i class="fa-solid fa-file-lines icon is-small"></i>
+                        <span class="text nav-text">Raporty</span>
+                    </a>
+                </li>
+
+                <!-- Wypożyczenia -->
+                <li class="nav-link">
+                    <a href="">
+                        <i class="fa-solid fa-users icon is-small"></i>
+                        <span class="text nav-text">Wypożyczenia</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <!-- przycisk do logowania -->
-<div id="login_button">
+<div class="p-5" id="login_button">
     <a href="" class="button is-dark is-outlined"><span class="icon-text"><span class="icon mr-1"><i class="fa-regular fa-user"></span></i>Logowanie</span></a>
 </div>
 
@@ -34,13 +107,11 @@
                         2024/2025
                     </div>
                 </a>
-                <hr class="dropdown-divider" />
                 <a href="{% url 'tabela_view' '2023-2024' 'przedmioty' %}">
                     <div class="dropdown-item">
                         2023/2024
                     </div>
                 </a>
-                <hr class="dropdown-divider" />
                 <a href="{% url 'tabela_view' '2022-2023' 'przedmioty' %}">
                     <div class="dropdown-item">
                         2022/2023
